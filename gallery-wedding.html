@@ -10,55 +10,40 @@
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--light);color:var(--ink);font-family:var(--sans);line-height:1.6}img{display:block;width:100%}a{color:inherit}.shell{width:min(100% - 64px,1440px);margin:auto}
 .nav{height:88px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.brand{font:400 clamp(1.35rem,2.2vw,1.9rem)/1 var(--serif);text-decoration:none}.nav-links{display:flex;gap:2rem}.nav-links a{font-size:.68rem;letter-spacing:.15em;text-decoration:none;text-transform:uppercase}.nav-links a:hover{opacity:.6}
 .hero{padding:clamp(6rem,12vw,11rem) 0 clamp(4rem,8vw,7rem)}.hero .shell{max-width:1440px}.eyebrow{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase}.hero h1{max-width:1050px;margin:1rem 0 2rem;font:400 clamp(4rem,10vw,10rem)/.78 var(--serif);letter-spacing:-.055em}.hero h1 em{display:block;margin:.16em 0 0 .42em;color:#777067;font-weight:400}.hero-copy{max-width:36rem;margin-top:2.5rem;color:var(--muted);font:400 clamp(1.1rem,1.6vw,1.35rem)/1.55 var(--serif)}
-.gallery-intro{display:flex;justify-content:space-between;align-items:end;gap:2rem;margin:0 auto 2rem;padding-top:1.5rem;border-top:1px solid var(--line)}.gallery-intro p{margin:0;color:var(--muted);font-size:.66rem;letter-spacing:.16em;text-transform:uppercase}.gallery{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:clamp(12px,1.6vw,24px);padding-bottom:clamp(7rem,12vw,12rem)}
-.slot{position:relative;grid-column:span 6;min-width:0;aspect-ratio:4/3;overflow:hidden;background:#e7e0d7;isolation:isolate}.slot:nth-child(1){grid-column:span 8;aspect-ratio:1.42}.slot:nth-child(2){grid-column:span 4;aspect-ratio:3/4;margin-top:5rem}.slot:nth-child(3){grid-column:2/span 5;aspect-ratio:4/5;margin-top:-1rem}.slot:nth-child(4){grid-column:8/span 5;aspect-ratio:4/5;margin-top:8rem}.slot:nth-child(5){grid-column:span 7;aspect-ratio:1.35}.slot:nth-child(6){grid-column:9/span 4;aspect-ratio:3/4;margin-top:5rem}.slot:nth-child(7){grid-column:1/span 5;aspect-ratio:4/5}.slot:nth-child(8){grid-column:7/span 6;aspect-ratio:1.35;margin-top:8rem}.slot:nth-child(9){grid-column:2/span 7;aspect-ratio:1.4}.slot:nth-child(10){grid-column:10/span 3;aspect-ratio:3/4;margin-top:5rem}.slot:nth-child(11){grid-column:1/span 6;aspect-ratio:4/3;margin-top:2rem}.slot:nth-child(12){grid-column:7/span 6;aspect-ratio:1.4;margin-top:8rem}
-.slot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1s cubic-bezier(.2,.65,.3,1),filter .8s}.slot:after{content:"";position:absolute;inset:35% 0 0;background:linear-gradient(180deg,transparent,rgba(15,13,11,.62));opacity:.82;transition:opacity .35s;pointer-events:none}.slot:before{content:attr(data-slot);position:absolute;z-index:2;left:1.25rem;right:1.25rem;bottom:1.1rem;color:#fff;font-size:.64rem;line-height:1.7;letter-spacing:.13em;text-align:left;text-transform:uppercase;white-space:pre-line;text-shadow:0 1px 12px #0005;pointer-events:none}.slot:hover img{transform:scale(1.035);filter:saturate(1.04)}.slot:hover:after{opacity:1}
+.gallery-intro{display:flex;justify-content:space-between;align-items:end;gap:2rem;margin:0 auto 2rem;padding-top:1.5rem;border-top:1px solid var(--line)}.gallery-intro p{margin:0;color:var(--muted);font-size:.66rem;letter-spacing:.16em;text-transform:uppercase}.gallery{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));align-items:start;gap:clamp(12px,1.6vw,24px);padding-bottom:clamp(7rem,12vw,12rem)}
+.slot{position:relative;grid-column:span 6;min-width:0;overflow:hidden;background:#e7e0d7;isolation:isolate}
+.slot:nth-child(1){grid-column:span 7}
+.slot:nth-child(2){grid-column:9/span 4;margin-top:5rem}
+.slot:nth-child(3){grid-column:2/span 5}
+.slot:nth-child(4){grid-column:8/span 5;margin-top:7rem}
+.slot:nth-child(5){grid-column:span 7}
+.slot:nth-child(6){grid-column:9/span 4;margin-top:4rem}
+.slot:nth-child(7){grid-column:1/span 5}
+.slot:nth-child(8){grid-column:7/span 6;margin-top:7rem}
+.slot:nth-child(9){grid-column:2/span 7}
+.slot:nth-child(10){grid-column:10/span 3;margin-top:4rem}
+.slot img{position:relative;display:block;width:100%;height:auto;object-fit:contain;transition:transform 1s cubic-bezier(.2,.65,.3,1),filter .8s}.slot:after{content:"";position:absolute;inset:35% 0 0;background:linear-gradient(180deg,transparent,rgba(15,13,11,.62));opacity:.82;transition:opacity .35s;pointer-events:none}.slot:before{content:attr(data-slot);position:absolute;z-index:2;left:1.25rem;right:1.25rem;bottom:1.1rem;color:#fff;font-size:.64rem;line-height:1.7;letter-spacing:.13em;text-align:left;text-transform:uppercase;white-space:pre-line;text-shadow:0 1px 12px #0005;pointer-events:none}.slot:hover img{transform:scale(1.035);filter:saturate(1.04)}.slot:hover:after{opacity:1}
 .story-end{padding:clamp(5rem,9vw,9rem) 0;background:var(--paper);text-align:center}.story-end .eyebrow{margin-bottom:1.5rem}.story-end h2{max-width:900px;margin:0 auto 2rem;font:400 clamp(3.2rem,7vw,7rem)/.9 var(--serif);letter-spacing:-.04em}.story-end a{display:inline-block;padding-bottom:.5rem;border-bottom:1px solid;text-decoration:none;font-size:.68rem;letter-spacing:.15em;text-transform:uppercase}
 footer{padding:2rem 0;background:#181716;color:#ffffff8c;border-top:1px solid #ffffff2b;font-size:.65rem;letter-spacing:.12em;text-transform:uppercase}.footer{display:flex;justify-content:space-between;gap:1rem}
-@media(max-width:800px){.shell{width:min(100% - 36px,1440px)}.nav{height:76px}.nav-links{gap:1rem}.nav-links a{font-size:.6rem}.hero h1 em{margin-left:.15em}.gallery{gap:12px}.slot,.slot:nth-child(n){grid-column:span 6;aspect-ratio:4/5;margin-top:0}.slot:nth-child(1),.slot:nth-child(5),.slot:nth-child(8),.slot:nth-child(9),.slot:nth-child(12){grid-column:1/-1;aspect-ratio:1.25}.slot:nth-child(4n+3){grid-column:1/span 7}.slot:nth-child(4n+2){grid-column:6/span 7}.slot:before{left:.8rem;right:.8rem;bottom:.75rem;font-size:.57rem}.gallery-intro{align-items:start;flex-direction:column;gap:.5rem}}
-@media(max-width:520px){.shell{width:min(100% - 28px,1440px)}.nav-links{gap:.8rem}.nav-links a{letter-spacing:.08em}.brand{font-size:1.2rem}.hero{padding-top:5rem}.hero h1{font-size:clamp(3.6rem,18vw,5.5rem)}.gallery{gap:10px}.slot,.slot:nth-child(n){grid-column:1/-1;aspect-ratio:1.2;margin-top:0}.slot:nth-child(2),.slot:nth-child(3),.slot:nth-child(4),.slot:nth-child(6),.slot:nth-child(7),.slot:nth-child(10){aspect-ratio:4/5}.footer{flex-direction:column}}
+@media(max-width:800px){.shell{width:min(100% - 36px,1440px)}.nav{height:76px}.nav-links{gap:1rem}.nav-links a{font-size:.6rem}.hero h1 em{margin-left:.15em}.gallery{gap:12px}.slot,.slot:nth-child(n){grid-column:span 6;margin-top:0}.slot:nth-child(1),.slot:nth-child(5),.slot:nth-child(8),.slot:nth-child(9){grid-column:1/-1}.slot:before{left:.8rem;right:.8rem;bottom:.75rem;font-size:.57rem}.gallery-intro{align-items:start;flex-direction:column;gap:.5rem}}
+@media(max-width:520px){.shell{width:min(100% - 28px,1440px)}.nav-links{gap:.8rem}.nav-links a{letter-spacing:.08em}.brand{font-size:1.2rem}.hero{padding-top:5rem}.hero h1{font-size:clamp(3.6rem,18vw,5.5rem)}.gallery{grid-template-columns:1fr;gap:16px}.slot,.slot:nth-child(n){grid-column:1/-1;margin-top:0}.footer{flex-direction:column}}.nav-links{gap:.8rem}.nav-links a{letter-spacing:.08em}.brand{font-size:1.2rem}.hero{padding-top:5rem}.hero h1{font-size:clamp(3.6rem,18vw,5.5rem)}.gallery{gap:10px}.slot,.slot:nth-child(n){grid-column:1/-1;aspect-ratio:1.2;margin-top:0}.slot:nth-child(2),.slot:nth-child(3),.slot:nth-child(4),.slot:nth-child(6),.slot:nth-child(7),.slot:nth-child(10){aspect-ratio:4/5}.footer{flex-direction:column}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition-duration:.01ms!important}}
   </style>
 </head>
 <body>
   <header><nav class="shell nav"><a class="brand" href="index.html">Pachia Vang Photography</a><div class="nav-links"><a href="portfolio.html">← All stories</a><a href="index.html">Home</a><a href="https://pachiavangphotography.studio.cloudspot.io/lead-forms/v/lf_2XgqkoF7S4mNq5EL6Q1XYs8CKUJX">Inquire</a></div></nav></header>
-  <main><section class="hero"><div class="shell"><p class="eyebrow">Story 02 · Heaven &amp; Timmy Wedding 2025</p><h1>Garden <em>Celebration</em></h1><p class="hero-copy">A romantic garden celebration captured with documentary intimacy and cinematic atmosphere. From quiet morning details to golden hour romance, this story celebrates the full arc of a day filled with connection, joy, and love.</p></div></section>
-  <section class="shell"><div class="gallery-intro"><p>Heaven &amp; Timmy · 2025</p><p>Details · Ceremony · Celebration · Afterglow</p></div><div class="gallery">
-    <!-- PHOTO 01: DETAILS - Setting the Scene -->
-    <div class="slot" data-slot="Photo 01&#10;Details &amp; Atmosphere"><img src="images/01-details.jpg" alt="Wedding story photograph 1 - Intimate details and atmosphere" loading="lazy"></div>
-    
-    <!-- PHOTO 02: GOLDEN HOUR - Venue Introduction -->
-    <div class="slot" data-slot="Photo 02&#10;Golden Hour Romance"><img src="images/02-golden-hour.jpg" alt="Wedding story photograph 2 - Golden hour atmosphere and romance" loading="lazy"></div>
-    
-    <!-- PHOTO 03: GETTING READY - Intimate Morning Moments -->
-    <div class="slot" data-slot="Photo 03&#10;Getting Ready Moments"><img src="images/03-getting-ready.jpg" alt="Wedding story photograph 3 - Getting ready intimate moments" loading="lazy"></div>
-    
-    <!-- PHOTO 04: SECRET VOWS - Private Intimacy -->
-    <div class="slot" data-slot="Photo 04&#10;Secret Vows &amp; Intimacy"><img src="images/04-secret-vows.jpg" alt="Wedding story photograph 4 - Secret vows intimate moment" loading="lazy"></div>
-    
-    <!-- PHOTO 05: CEREMONY - The Heart of the Day -->
-    <div class="slot" data-slot="Photo 05&#10;Ceremony &amp; Vows"><img src="images/05-ceremony.jpg" alt="Wedding story photograph 5 - Ceremony wide shot and atmosphere" loading="lazy"></div>
-    
-    <!-- PHOTO 06: CEREMONY - The Emotional Peak -->
-    <div class="slot" data-slot="Photo 06&#10;Exchange of Vows"><img src="images/06-vows.jpg" alt="Wedding story photograph 6 - Exchange of vows emotional moment" loading="lazy"></div>
-    
-    <!-- PHOTO 07: FIRST DANCE - Romantic Transition -->
-    <div class="slot" data-slot="Photo 07&#10;First Dance &amp; Romance"><img src="images/07-first-dance.jpg" alt="Wedding story photograph 7 - First dance romantic moment" loading="lazy"></div>
-    
-    <!-- PHOTO 08: SPEECHES - Connection & Gratitude -->
-    <div class="slot" data-slot="Photo 08&#10;Speeches &amp; Reactions"><img src="images/08-speeches.jpg" alt="Wedding story photograph 8 - Emotional speeches and reactions" loading="lazy"></div>
-    
-    <!-- PHOTO 09: DANCE FLOOR - Celebration Energy -->
-    <div class="slot" data-slot="Photo 09&#10;Dance Floor &amp; Joy"><img src="images/09-dance.jpg" alt="Wedding story photograph 9 - Dance floor atmosphere and joy" loading="lazy"></div>
-    
-    <!-- PHOTO 10: GOLDEN HOUR - Poetic Conclusion -->
-    <div class="slot" data-slot="Photo 10&#10;Golden Hour Portraits"><img src="images/10-golden-portraits.jpg" alt="Wedding story photograph 10 - Golden hour romantic portraits" loading="lazy"></div>
-    
-    <!-- PHOTO 11: BRIDAL PARTY - Community & Love -->
-    <div class="slot" data-slot="Photo 11&#10;Bridal Party &amp; Celebration"><img src="images/11-bridal-party.jpg" alt="Wedding story photograph 11 - Bridal party group moments" loading="lazy"></div>
-    
-    <!-- PHOTO 12: AFTERGLOW - Cinematic Closing -->
-    <div class="slot" data-slot="Photo 12&#10;Afterglow &amp; Memories"><img src="images/12-afterglow.jpg" alt="Wedding story photograph 12 - Afterglow atmospheric closing" loading="lazy"></div>
+  <main><section class="hero"><div class="shell"><p class="eyebrow">Story 02 · Heaven &amp; Timmy Wedding 2025</p><h1>Garden <em>Celebration</em></h1><p class="hero-copy">A garden celebration told through quiet preparations, a meaningful ceremony, portraits with their closest people, heartfelt speeches, and a joyful dance floor.</p></div></section>
+  <section class="shell"><div class="gallery-intro"><p>Heaven &amp; Timmy · 2025</p><p>Details · Portraits · Ceremony · Celebration · Afterglow</p></div><div class="gallery">
+    <div class="slot" data-slot="Photo 01\nDetails &amp; Atmosphere"><img src="images/01-details.jpg" alt="Wedding table details with the couple’s Mr &amp; Mrs sign" loading="eager"></div>
+    <div class="slot" data-slot="Photo 02\nGetting Ready"><img src="images/03-getting-ready.jpg" alt="Heaven with her bridal party before the ceremony" loading="eager"></div>
+    <div class="slot" data-slot="Photo 03\nA Quiet Moment"><img src="images/04-secret-vows.jpg" alt="Heaven and Timmy sharing an intimate moment" loading="lazy"></div>
+    <div class="slot" data-slot="Photo 04\nGarden Ceremony"><img src="images/05-ceremony.jpg" alt="The garden ceremony space and guests" loading="lazy"></div>
+    <div class="slot" data-slot="Photo 05\nPortrait in Black &amp; White"><img src="images/02-golden-hour.jpg" alt="Heaven and Timmy together in a black and white portrait" loading="lazy"></div>
+    <div class="slot" data-slot="Photo 06\nBridal Party"><img src="images/11-bridal-party.jpg" alt="Heaven and Timmy with their bridal party" loading="lazy"></div>
+    <div class="slot" data-slot="Photo 07\nSpeeches &amp; Reactions"><img src="images/08-speeches.jpg" alt="Timmy speaking as Heaven and guests react" loading="lazy"></div>
+    <div class="slot" data-slot="Photo 08\nDance Floor"><img src="images/09-dance.jpg" alt="Guests celebrating on the dance floor" loading="lazy"></div>
+    <div class="slot" data-slot="Photo 09\nGolden Hour"><img src="images/10-golden-portraits.jpg" alt="A romantic golden hour portrait of Heaven and Timmy" loading="lazy"></div>
+    <div class="slot" data-slot="Photo 10\nAfterglow"><img src="images/12-afterglow.jpg" alt="A final atmospheric portrait of Heaven and Timmy" loading="lazy"></div>
   </div></section>
   <section class="story-end"><div class="shell"><p class="eyebrow">The day, held close</p><h2>Every little moment becomes part of the story.</h2><a href="https://pachiavangphotography.studio.cloudspot.io/lead-forms/v/lf_2XgqkoF7S4mNq5EL6Q1XYs8CKUJX">Tell me about your day</a></div></section></main>
   <footer><div class="shell footer"><span>Documentary · Cinematic · Human</span><span>© <span id="year"></span> Pachia Vang Photography</span></div></footer><script>document.getElementById('year').textContent=new Date().getFullYear()</script>
